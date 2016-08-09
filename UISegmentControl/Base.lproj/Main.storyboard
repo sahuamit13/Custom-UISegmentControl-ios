@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISegmentControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR4-GK-kZe">
+                                <rect key="frame" x="166" y="157" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nIj-XG-kAG" customClass="TabySegmentedControl" customModule="UISegmentControl" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55" width="375" height="29"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="is6-cz-i2r"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vR4-GK-kZe" firstAttribute="top" secondItem="nIj-XG-kAG" secondAttribute="bottom" constant="74" id="2GP-VZ-y0t"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zH-88-0FS"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="B6K-fB-aye"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-264.5" id="E2X-8Y-Bow"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="EF4-DI-t3b"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="centerX" secondItem="vR4-GK-kZe" secondAttribute="centerX" id="JAu-Jv-WFX"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="f4u-gG-aPG"/>
+                            <constraint firstAttribute="trailing" secondItem="nIj-XG-kAG" secondAttribute="trailing" id="r5L-iL-XoP"/>
+                            <constraint firstItem="nIj-XG-kAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wt0-AS-gwc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B6K-fB-aye"/>
+                                <exclude reference="E2X-8Y-Bow"/>
+                                <exclude reference="f4u-gG-aPG"/>
+                                <exclude reference="wt0-AS-gwc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="nIj-XG-kAG" id="aD0-r0-dzT"/>
+                        <outlet property="textLabel" destination="vR4-GK-kZe" id="NaI-gb-vX9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287.5" y="289.5"/>
+        </scene>
+    </scenes>
+</document>
