@@ -11,4 +11,6 @@ Custom design UISegment View Control Swift
   
   Add the following property to your ViewController's header file:
     
-    crea'@IBOutlet weak var segmentedControl: TabySegmentedControl!'
+    create outlet '@IBOutlet weak var segmentedControl: TabySegmentedControl!'
+
+  
