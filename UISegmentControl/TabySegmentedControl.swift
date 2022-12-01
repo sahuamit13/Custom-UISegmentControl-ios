@@ -13,7 +13,6 @@ class TabySegmentedControl: UISegmentedControl {
     func initUI(){
         setupBackground()
         setupFonts()
-    
     }
     
     func setupBackground(){
@@ -21,33 +20,31 @@ class TabySegmentedControl: UISegmentedControl {
         let dividerImage = UIImage(named: "seperator")
         let backgroundImageSelected = UIImage(named: "highlighter")
         
+        self.setBackgroundImage(backgroundImage, for: .normal, barMetrics: .default)
+        self.setBackgroundImage(backgroundImageSelected, for: .highlighted, barMetrics: .default)
+        self.setBackgroundImage(backgroundImageSelected, for: .selected, barMetrics: .default)
         
-        self.setBackgroundImage(backgroundImage, forState: .Normal, barMetrics: .Default)
-        self.setBackgroundImage(backgroundImageSelected, forState: .Highlighted, barMetrics: .Default)
-        self.setBackgroundImage(backgroundImageSelected, forState: .Selected, barMetrics: .Default)
-        
-        self.setDividerImage(dividerImage, forLeftSegmentState: .Normal, rightSegmentState: .Selected, barMetrics: .Default)
-        self.setDividerImage(dividerImage, forLeftSegmentState: .Selected, rightSegmentState: .Normal, barMetrics: .Default)
-        self.setDividerImage(dividerImage, forLeftSegmentState: .Normal, rightSegmentState: .Normal, barMetrics: .Default)
+        self.setDividerImage(dividerImage, forLeftSegmentState: .normal, rightSegmentState: .selected, barMetrics: .default)
+        self.setDividerImage(dividerImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+        self.setDividerImage(dividerImage, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
     }
     
     func setupFonts(){
-        let font = UIFont.systemFontOfSize(12)
-        
+        let font = UIFont.systemFont(ofSize: 12)
         
         let normalTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.grayColor(),
-            NSFontAttributeName: font
+            NSAttributedString.Key.foregroundColor: UIColor.gray,
+            NSAttributedString.Key.font: font
         ]
         
         let selectedTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.blackColor(),
-            NSFontAttributeName: font
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: font
         ]
         
-        self.setTitleTextAttributes(normalTextAttributes, forState: .Normal)
-        self.setTitleTextAttributes(normalTextAttributes, forState: .Highlighted)
-        self.setTitleTextAttributes(selectedTextAttributes, forState: .Selected)
+        self.setTitleTextAttributes(normalTextAttributes, for: .normal)
+        self.setTitleTextAttributes(normalTextAttributes, for: .highlighted)
+        self.setTitleTextAttributes(selectedTextAttributes, for: .selected)
     }
 
 }

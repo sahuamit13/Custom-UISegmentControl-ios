@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: TabySegmentedControl!
 
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.initUI()
@@ -30,9 +28,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBAction func segmentedControlAction(sender: AnyObject) {
-        
+    @IBAction func segmentValueChanged(_ sender: TabySegmentedControl) {
         if(segmentedControl.selectedSegmentIndex == 0){
             textLabel.text = "First segment selected"
         }else if(segmentedControl.selectedSegmentIndex == 1){
@@ -40,7 +36,7 @@ class ViewController: UIViewController {
         }else if(segmentedControl.selectedSegmentIndex==2){
             textLabel.text = "Third segment selected"
         }
-        
     }
+   
 }
 
